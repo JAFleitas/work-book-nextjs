@@ -10,7 +10,11 @@ interface Props {
 
 export const Layout: FC<Props> = ({ title = "OperJira - App ", children }) => {
   return (
-    <Box sx={{ flexFlow: 1 }}>
+    <Box
+      sx={{
+        flexFlow: 1,
+      }}
+    >
       <Head>
         <title>{title}</title>
       </Head>
