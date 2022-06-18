@@ -23,6 +23,7 @@ import { Layout } from "../../components/layouts/Layout";
 import { Entry, EntryStatus } from "../../interfaces";
 import { dbEntries } from "../../database";
 import { EntriesContex } from "../../context/entries";
+import { dateFunction } from "../../utils";
 
 const validStatus: EntryStatus[] = ["pending", "in-progress", "finished"];
 
@@ -55,7 +56,7 @@ const EntryPage: FC<Props> = ({ entry }) => {
       status,
       description: inputValue,
     };
-    updateEntry(updatedEntry);
+    updateEntry(updatedEntry, true);
   };
   return (
     <Layout title={inputValue.substring(0, 20) + "..."}>
@@ -70,7 +71,9 @@ const EntryPage: FC<Props> = ({ entry }) => {
           <Card>
             <CardHeader
               title={`Entry:`}
-              subheader={`Created ${entry.createdAt} ago`}
+              subheader={`Created ${dateFunction.getFormatDistanceToNow(
+                entry.createdAt
+              )} ago`}
             />
             <CardContent>
               <TextField
