@@ -1,8 +1,8 @@
 # Next.js WorkBook App
 
 Aplicación destinada a crear una lista de tareas al estilo de Open-jira.
-La app se creo con NextJs; se utilizó typescript y se creo un CRUD con la api de NextJs
-Y para la base de datos se utilizó MongoDB y Docker para generar la imagen.
+La app se creo con NextJs con typescript y se creo un CRUD con la api de NextJs
+y para la base de datos se utilizó MongoDB y Docker para generar la imagen.
 
 Para correr localmente la aplicacion se necesita la base de datos:
 
